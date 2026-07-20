@@ -6,11 +6,7 @@ let ADMIN_TOKEN = "";
 let ALL_USERS   = [];
 
 // ── API base ──────────────────────────────────────────
-// Troca pelo IP do seu servidor se rodar local
-// No Netlify usa o proxy configurado no netlify.toml
-const API = window.location.hostname === "localhost"
-    ? "http://31.97.255.112:5555"
-    : "http://31.97.255.112:5555";  // sempre bate direto na API
+const API = "https://ciclone-server-production.up.railway.app";
 
 // ── helpers ───────────────────────────────────────────
 function headers() {
