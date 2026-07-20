@@ -4,9 +4,11 @@ Roda em: http://31.97.255.112:5555
 """
 
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
 import sqlite3, uuid, hashlib, datetime, os, functools
 
 app = Flask(__name__)
+CORS(app)  # permite requisições do painel Netlify
 
 # ── Config ────────────────────────────────────────────────────────────────
 DB_PATH     = os.path.join(os.path.dirname(__file__), "ciclone.db")
